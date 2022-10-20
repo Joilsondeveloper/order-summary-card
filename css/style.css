@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&display=swap');
+
+:root {
+    --fonte-conteudo: 'Red Hat Display', sans-serif;
+
+    --pale-blue: #e0e8ff;
+    --bright-blue: #3829e0;
+    --very-pale-blue: #f5f7ff;
+    --desaturated-blue: #7280a7;
+    --dark-blue: #1f2f56;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-family: var(--fonte-conteudo);
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background: var(--pale-blue) url(../img/pattern-background-mobile.svg) center top no-repeat fixed;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main {
+    background-color: #fff;
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1.5px 1.5px 5px #c1c8dbb6;
+}
+
+main img {
+    width: 100%;
+}
+
+main section {
+    width: 100%;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main section h1 {
+    color: var(--dark-blue);
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+main section span {
+    color: var(--desaturated-blue);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+main .information {
+    background-color: var(--very-pale-blue);
+    margin-top: 25px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+main .music-price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+main .music-price img {
+    width: 50px;
+}
+
+main .music-price .price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+main .music-price .price strong {
+    color: var(--dark-blue);
+}
+
+main .information a {
+    color: var(--bright-blue);
+    font-size: 1em;
+    font-weight: 600;
+    transition: color .3s;
+}
+
+main .information a:hover {
+    color: var(--desaturated-blue);
+    text-decoration: none;
+}
+
+main button {
+    background-color: var(--bright-blue);
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 30px 0;
+    box-shadow: 1px 4px 5px #3627d688;
+    transition: background-color .3s;
+}
+
+main button:hover {
+    background-color: #3829e0c9;
+}
+
+main #cancel-order {
+    color: var(--desaturated-blue);
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 30px;
+    transition: color .3s;
+}
+
+main #cancel-order:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        background: var(--pale-blue) url(../img/pattern-background-desktop.svg) center top no-repeat fixed;
+        background-size: cover;
+    }
+}
